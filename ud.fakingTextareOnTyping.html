@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center;">
+
+<h2>Hello Ngân</h2>
+<form>
+    <label>
+        <textarea cols="30" rows="5" id="txt" onkeydown="funny()" ></textarea>
+    </label>
+</form>
+<script>
+    let array = [];
+    let str = "";
+    array[1] ='N';
+    array[2] ='G';
+    array[3] ='Â';
+    array[4] ='N';
+    array[5] =' ';
+    array[6] ='N';
+    array[7] ='G';
+    array[8] ='U';
+    array[9] =' ';
+    array[10] ='N';
+    array[11] ='G';
+    array[12] ='Ố';
+    array[13] ='C';
+    array[14] =' ';
+    array[15] ='N';
+    array[16] ='G';
+    array[17] ='Ớ';
+    array[18] =' ';
+    array[19] ='N';
+    array[20] ='G';
+    array[21] ='Ẩ';
+    array[22] ='N';
+    array[23] =' ';
+    array[24] ='N';
+    array[25] ='G';
+    array[26] ='Ờ';
+    array[27] =' ';
+    array[28] ='N';
+    array[29] ='G';
+    array[30] ='H';
+    array[31] ='Ệ';
+    array[32] ='C';
+    array[33] ='H';
+
+    function funny()
+    {
+        let text = document.getElementById("txt").value;
+        let j = text.length;
+        if (j>0) {
+            for (let i = 1; i <= j; i++) {
+                str = str + array[i];
+                if (i === 33) {
+                    str = "";
+                }
+            }
+        }
+        document.getElementById("txt").value = str;
+        str = "";
+        setTimeout("funny()", 1);
+    }
+</script>
+</body>
+</html>

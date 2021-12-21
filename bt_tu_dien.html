@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Từ Điển Anh - Việt</h2>
+<input type="text" placeholder="Nhập từ cần tìm" id="text">
+<input type="submit" id="submit" onclick="search()"/>
+<p id="res">result</p>
+<script>
+    let result = document.getElementById("res");
+
+    function search() {
+        let text = document.getElementById("text").value;
+        let EL = ["hello", "book", "banana", "cat", "dog", "key", "bird"]
+        let V = ["xin chào", "quyển sách", "quả chuối", "con mèo", "con chó", "chìa khóa", "con chim"]
+        for (let i = 0; i < EL.length; i++) {
+            if (text === EL[i]) {
+                result.innerHTML = "result: " + V[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>
